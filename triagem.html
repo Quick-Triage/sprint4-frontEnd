@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<style>
@@ -13,7 +13,7 @@
 			font-family: "Raleway", sans-serif;
 		}
 	</style>
-    <title>Home - Sabará</title>
+    <title>Triagem Rápida - Sabará</title>
 </head>
 <body>
     <header class="p-4 dark:bg-sky-100 dark:text-gray-800">
@@ -51,18 +51,109 @@
 	</div>
 </header>
 
+<section class="p-6 dark:bg-gray-100 dark:text-gray-900">
+	<form novalidate="" action="" class="container flex flex-col mx-auto space-y-12">
+		<fieldset class="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
+			<div class="space-y-2 col-span-full lg:col-span-1 flex flex-col">
+				<p class="font-medium">Informações do paciente</p>
+				<p class="text-xs">insira as informações da pessoa a ser atendida</p>
+			</div>
+			<div class="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+				<div class="col-span-full sm:col-span-3">
+					<label for="firstname" class="text-sm">Nome completo</label>
+					<input id="firstname" type="text" placeholder="" class="w-full rounded-md bg-sky-100 px-2">
+				</div>
+				<div class="col-span-full sm:col-span-3">
+					<label for="date" class="text-sm">Data de Nascimento</label>
+					<input id="date" type="date" placeholder="data" class="w-full rounded-md bg-sky-100 px-2">
+				</div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">CPF</label>
+					<input id="cpf" type="number" placeholder="" class="w-full rounded-md bg-sky-100 px-2">
+                </div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">Selecione o plano de saúde</label>
+					<select name="plano" required="" class="w-full rounded-md bg-sky-100 px-2">
+                        <option value=""></option>
+                        <option value="Afresp">Afresp</option>
+                        <option value="Amil">Amil</option>
+                        <option value="Unimed">Unimed</option>
+                        <option value="Bradesco">Bradesco</option>
+                    </select>
+                </div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">Sintomas de febre?</label>
+					<select name="febre" required="" class="w-full rounded-md bg-sky-100 px-2">
+                        <option value=""></option>
+                        <option value="">Nenhum</option>
+                        <option value="">Leve</option>
+                        <option value="">Moderada</option>
+                        <option value="">Alta</option>
+                    </select>
+                </div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">O paciente apresentou Vômito?</label>
+					<select name="vomito" required="" class="w-full rounded-md bg-sky-100 px-2">
+                        <option value=""></option>
+                        <option value="">Sim</option>
+                        <option value="">Não</option>
+                    </select>
+                </div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">Problemas de pressão</label>
+					<select name="pressao" required="" class="w-full rounded-md bg-sky-100 px-2">
+                        <option value=""></option>
+                        <option value="Não">Nenhum</option>
+                        <option value="Alta">Pressão Alta</option>
+                        <option value="Baixa">Pressão Baixa</option>
+                    </select>
+                </div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">Dor no corpo</label>
+					<select name="dores" required="" class="w-full rounded-md bg-sky-100 px-2">
+                        <option value=""></option>
+                        <option value="Não">Nenhuma</option>
+                        <option value="Cabeça">Cabeça</option>
+                        <option value="Garganta">Garganta</option>
+                        <option value="Braço ou mão">Braço ou mão</option>
+                        <option value="Peito">Peito</option>
+                        <option value="Costas">Costas</option>
+                        <option value="Barriga">Barriga</option>
+                        <option value="Partes Íntimas">Partes Íntimas</option>
+                        <option value="Perna">Perna</option>
+                        <option value="Pé">Pé</option>
+                    </select>
+                </div>
+				<div class="col-span-full sm:col-span-3">
+                    <label for="date" class="text-sm">Intensidade da dor</label>
+					<select name="dores" required="" class="w-full rounded-md bg-sky-100 px-2">
+                        <option value=""></option>
+                        <option value="Não">Leve</option>
+                        <option value="Cabeça">Moderada</option>
+                        <option value="Garganta">Forte</option>
+                    </select>
+                </div>
+                <div class="col-span-full sm:col-span-3">
+					<label for="date" class="text-sm">Data de Inicio dos sintomas</label>
+					<input id="date" type="date" placeholder="data" class="w-full rounded-md bg-sky-100 px-2">
+				</div>
+			</div>
+            <div class="lg:col-start-2">
+                <button type="submit" class="px-10 py-5 bg-blue-500 rounded-lg hover:bg-blue-700 transition cursor-pointer hover:scale-102 font-extrabold hover:text-white">Enviar</button>                   
+            </div>
+		</fieldset>
+	</form>
+</section>
 
 
-
-<section class="py-6 dark:bg-gray-100 dark:text-gray-900">
+<section class="py-6 dark:bg-gray-100 dark:text-gray-900 bg-gray-200">
 	<div class="container mx-auto flex flex-col justify-around p-4 text-center md:p-10 lg:flex-row">
-		<div class="bg-blue-800 rounded-xl max-w-23 self-center">
-			<img src="/assets/IconSabara.png" alt="">
+        <div class="flex flex-col justify-center lg:text-left">
+            <h1 class="p-2 text-3xl font-medium leading-tight title-font">Acesse a triagem rápida pelo nosso aplicativo</h1>
 		</div>
-		<div class="flex flex-col justify-center lg:text-left">
-			<h1 class="py-2 text-3xl font-medium leading-tight title-font">Aplicativo Sabará</h1>
-			<p>Baixe e tenha acesso a funcionalidades exclusivas</p>
-		</div>
+        <div class="bg-blue-800 rounded-xl max-w-23 self-center">
+            <img src="/assets/IconSabara.png" alt="">
+        </div>
 		<div class="flex flex-col items-center justify-center flex-shrink-0 mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end">
 			<button class="inline-flex items-center px-6 py-3 rounded-lg dark:bg-blue-600 dark:text-gray-50 cursor-pointer hover:bg-blue-700 transition hover:scale-105">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current w-7 h-7 dark:text-gray-50">
@@ -85,6 +176,7 @@
 		</div>
 	</div>
 </section>
+
 
 <footer class="px-4 divide-y dark:bg-sky-100 dark:text-gray-800">
 	<div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
@@ -175,6 +267,5 @@
 	</div>
 	<div class="py-6 text-sm text-center dark:text-gray-600">© 2025 Hospital Sabará - Todos os direitos reservados.</div>
 </footer>
-
 </body>
 </html>
